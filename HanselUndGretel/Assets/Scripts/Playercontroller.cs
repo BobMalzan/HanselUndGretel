@@ -23,6 +23,10 @@ public class Playercontroller : MonoBehaviour
 
     Rigidbody m_rigid;
 
+    //Animation
+    Animator m_Animator;
+    int m_aniMovID;
+
     private CompanionAI m_ai;
 
     // Start is called before the first frame update
@@ -34,6 +38,8 @@ public class Playercontroller : MonoBehaviour
 
         m_currentState = EPlayerState.Freehanded;
         m_rigid = GetComponent<Rigidbody>();
+        m_Animator = GetComponent<Animator>();
+        m_aniMovID = Animator.StringToHash("MoveSpeed");
 
         m_ai = FindObjectOfType<CompanionAI>();
     }
@@ -65,22 +71,49 @@ public class Playercontroller : MonoBehaviour
         }
     }
 
+    private void OnAnimatorIK(int layerIndex)
+    {
+        if (m_currentState == EPlayerState.HoldingHand)
+        {
+            m_Animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
+            m_Animator.SetIKPosition(AvatarIKGoal.RightHand, Vector3.Lerp(transform.position, m_ai.transform.position, 0.5f) + Vector3.up * 0.5f);
+        }
+    }
+
     void Movement()
     {
         if (IsGrounded())
         {
             if (m_currentState == EPlayerState.HoldingHand && Vector3.Distance(m_ai.transform.position, transform.position) > m_DistanceDragBack)
             {
+                m_Animator.SetFloat(m_aniMovID, 1.0f);
+
                 //DragBack
                 Vector3 dir = (m_ai.transform.position - transform.position).normalized;
-
                 m_rigid.velocity = dir * 1.5f;
             }
             else
             {
                 //Move
                 Vector3 mov = transform.right * Input.GetAxis("Horizontal") + transform.forward * Input.GetAxis("Vertical");
+                mov.Normalize();
                 mov *= m_currentState == EPlayerState.Freehanded ? m_RunSpeed : m_WalkSpeed;
+
+                if(mov != Vector3.zero)
+                {
+                    if(Input.GetAxis("Vertical") < 0)
+                    {
+                        m_Animator.SetFloat(m_aniMovID, -0.66f);
+                    }
+                    else
+                    {
+                        m_Animator.SetFloat(m_aniMovID, 1.0f);
+                    }
+                }
+                else
+                {
+                    m_Animator.SetFloat(m_aniMovID, 0.0f);
+                }
 
                 m_rigid.velocity = mov;
             }
@@ -95,9 +128,9 @@ public class Playercontroller : MonoBehaviour
     {
         Ray ray = new Ray(transform.position, Vector3.down);
 
-        Debug.DrawLine(ray.origin, ray.origin + ray.direction * 1.1f);
+        Debug.DrawLine(ray.origin, ray.origin + ray.direction * .05f);
 
-        return Physics.Raycast(ray, 1.1f); //7
+        return Physics.Raycast(ray, .05f); //7
     }
 
     public enum EPlayerState

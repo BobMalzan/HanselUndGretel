@@ -15,6 +15,12 @@ public class CompanionAI : MonoBehaviour
 
     Rigidbody m_rigid;
 
+    //Animation
+    Animator m_Animator;
+    int m_aniMovID;
+    int m_aniJumpID;
+    int m_aniGroundedID;
+
     float m_currentStress;
 
     ECompanionState m_currentState;
@@ -26,6 +32,11 @@ public class CompanionAI : MonoBehaviour
     {
         m_Player = FindObjectOfType<Playercontroller>();
         m_rigid = GetComponent<Rigidbody>();
+        m_Animator = GetComponent<Animator>();
+
+        m_aniMovID = Animator.StringToHash("MoveSpeed");
+        m_aniJumpID = Animator.StringToHash("Jump");
+        m_aniGroundedID = Animator.StringToHash("Grounded");
     }
 
     public void SetStressZone(StressZone _zone)
@@ -58,6 +69,16 @@ public class CompanionAI : MonoBehaviour
     {
         BehaviorUpdate();
         UpdateStress();
+
+    }
+
+    private void OnAnimatorIK(int layerIndex)
+    {
+        if(m_currentState == ECompanionState.Follow)
+        {
+            m_Animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
+            m_Animator.SetIKPosition(AvatarIKGoal.LeftHand, Vector3.Lerp(transform.position, m_Player.transform.position, 0.5f) + Vector3.up * 0.5f);
+        }
     }
 
     private void BehaviorUpdate()
@@ -65,14 +86,28 @@ public class CompanionAI : MonoBehaviour
         switch (m_currentState)
         {
             case ECompanionState.Waiting:
-                transform.LookAt(m_Player.transform.position);
+                Vector3 lookAtPos = m_Player.transform.position;
+                lookAtPos.y = transform.position.y;
+                transform.LookAt(lookAtPos);
                 break;
             case ECompanionState.Follow:
-                transform.LookAt(m_Player.transform.position);
-                if (Vector3.Distance(m_Player.transform.position, transform.position) > m_followingDistance)
+                Vector3 lookAtPos2 = m_Player.transform.position;
+                lookAtPos2.y = transform.position.y;
+                transform.LookAt(lookAtPos2);
+
+                float distance = Vector3.Distance(m_Player.transform.position, transform.position);
+
+                if (distance > m_followingDistance)
                 {
-                    Vector3 dir = (m_Player.transform.position - transform.position).normalized;
-                    m_rigid.MovePosition(transform.position + dir * (m_Player.m_WalkSpeed + 1.0f) * Time.deltaTime);
+                    m_Animator.SetFloat(m_aniMovID, 1.0f);
+
+                    Vector3 dir = (lookAtPos2 - transform.position).normalized;
+                    float slowDown = (distance - m_followingDistance) > 0.01f ? -0.5f : (distance - m_followingDistance);
+                    m_rigid.MovePosition(transform.position + dir * (m_Player.m_WalkSpeed - slowDown) * Time.deltaTime);
+                }
+                else
+                {
+                    m_Animator.SetFloat(m_aniMovID, 0.0f);
                 }
                 break;
             case ECompanionState.Panic:
@@ -137,6 +172,8 @@ public class CompanionAI : MonoBehaviour
 
     void ChangeState(ECompanionState _state)
     {
+        m_Animator.SetFloat(m_aniMovID, 0.0f);
+
         switch (_state)
         {
             case ECompanionState.Waiting:
