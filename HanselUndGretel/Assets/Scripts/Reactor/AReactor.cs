@@ -57,6 +57,12 @@ public abstract class AReactor : MonoBehaviour
             allReactors = new List<AReactor>();
         }
 
+        if(allReactors.Contains(this))
+        {
+            Debug.LogError("Allready added!!!");
+        }
+
         allReactors.Add(this);
+
     }
 }
