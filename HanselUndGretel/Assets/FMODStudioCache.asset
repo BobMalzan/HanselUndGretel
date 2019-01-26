@@ -19,6 +19,7 @@ MonoBehaviour:
   - {fileID: 114819919292974826}
   - {fileID: 114480670138666964}
   - {fileID: 114790460202962356}
+<<<<<<< HEAD
   - {fileID: 114570832799720888}
   - {fileID: 114448804817811222}
   - {fileID: 114629697490672966}
@@ -28,6 +29,14 @@ MonoBehaviour:
   MasterBankRef: {fileID: 114068736314454018}
   StringsBankRef: {fileID: 114625583559233942}
   stringsBankWriteTime: 636841268062473561
+=======
+  - {fileID: 114699825288146658}
+  - {fileID: 114224834330936410}
+  - {fileID: 114416065129781162}
+  MasterBankRef: {fileID: 114142516458215716}
+  StringsBankRef: {fileID: 114625583559233942}
+  stringsBankWriteTime: 636841230538940639
+>>>>>>> master
   cacheVersion: 2
 --- !u!114 &114068736314454018
 MonoBehaviour:
@@ -106,12 +115,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Unity\Hansel und Gretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master
     Bank.bank
-  lastModified: 636841103708652829
+  lastModified: 636841230538930668
   LoadResult: 0
   FileSizes:
   - Name: Desktop
+<<<<<<< HEAD
     Value: 635200
   Exists: 0
+=======
+    Value: 1070848
+  Exists: 1
+>>>>>>> master
 --- !u!114 &114166676601508640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +149,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1375
+--- !u!114 &114224834330936410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Light Torch
+  guid: f752e3dfc246db48886edc7dcbd5f81a
+  Banks:
+  - {fileID: 114142516458215716}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
 --- !u!114 &114305829186434992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +258,11 @@ MonoBehaviour:
   - Name: Desktop
     Value: 634080
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &114448804817811222
+=======
+--- !u!114 &114416065129781162
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -233,16 +274,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Path: event:/Wolves
   guid: bbe760d3e589b1499c225930e715e049
   Banks:
   - {fileID: 114068736314454018}
+=======
+  Path: event:/Torch
+  guid: fb2d105a3547dd4bad826ab7af0ba886
+  Banks:
+  - {fileID: 114142516458215716}
+>>>>>>> master
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
   Length: 42000
 --- !u!114 &114474097826777664
 MonoBehaviour:
@@ -267,6 +316,9 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1500
+=======
+  Length: 18500
+>>>>>>> master
 --- !u!114 &114480670138666964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,11 +378,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\GGJ19\Build\Desktop\Master Bank.strings.bank
+<<<<<<< HEAD
   lastModified: 636841268062473561
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1084
+=======
+  lastModified: 636841230538940639
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 938
+>>>>>>> master
   Exists: 1
 --- !u!114 &114629697490672966
 MonoBehaviour:
@@ -374,7 +434,11 @@ MonoBehaviour:
   - Name: Desktop
     Value: 824
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &114787389775895512
+=======
+--- !u!114 &114699825288146658
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -386,6 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Path: event:/Menu Popup
   guid: 1549a581fe61ae4aac9116420af285b4
   Banks:
@@ -397,6 +462,19 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3000
+=======
+  Path: event:/Stress
+  guid: 956dabe967aa3b4aaf5604beda9ca8d7
+  Banks:
+  - {fileID: 114142516458215716}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6000
+>>>>>>> master
 --- !u!114 &114790460202962356
 MonoBehaviour:
   m_ObjectHideFlags: 0
