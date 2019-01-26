@@ -1,26 +1,41 @@
 fileFormatVersion: 2
-guid: 6a32cccbf417842d88091e6a196a43ba
+guid: adda049b3324e4afd88ec79117418e21
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: rumah
+    100004: sumur_2
+    100006: tanah
     400000: //RootNode
-    2100000: 'Material #46'
-    2100002: 'Material #58'
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: FireTorch
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #46'
-    second: {fileID: 2100000, guid: acb88fda6f4ac48fbb60b88c645da57b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #58'
-    second: {fileID: 2100000, guid: cbe09bd634fc54456981ff87e9630e07, type: 2}
+    400002: rumah
+    400004: sumur_2
+    400006: tanah
+    2100000: uv_tex_tanah
+    2100002: col_batu_penyangga
+    2100004: uv_atap
+    2100006: uv_atap_kanan
+    2100008: uv_atap_kiri
+    2100010: Material.002
+    2100012: uv_tex_ding2
+    2100014: col_kayu_penyangga
+    2100016: col_tangga
+    2100018: Material.001
+    2100020: col_kasur
+    2100022: col_bantal_kasur
+    2100024: col_meja
+    2100026: uv_tex_sumur
+    2300000: rumah
+    2300002: sumur_2
+    2300004: tanah
+    3300000: rumah
+    3300002: sumur_2
+    3300004: tanah
+    4300000: tanah
+    4300002: rumah
+    4300004: sumur_2
+    2186277476908879412: ImportLogs
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
