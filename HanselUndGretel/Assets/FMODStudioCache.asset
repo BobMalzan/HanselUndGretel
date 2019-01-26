@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114625583559233942}
-  - {fileID: 114105101196123690}
+  - {fileID: 114681205560186358}
   EditorEvents:
   - {fileID: 114819919292974826}
   - {fileID: 114480670138666964}
   - {fileID: 114790460202962356}
-  MasterBankRef: {fileID: 114105101196123690}
+  MasterBankRef: {fileID: 114681205560186358}
   StringsBankRef: {fileID: 114625583559233942}
-  stringsBankWriteTime: 636841040540000000
+  stringsBankWriteTime: 636841026904465975
   cacheVersion: 2
 --- !u!114 &114104195073175002
 MonoBehaviour:
@@ -65,7 +65,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 634080
-  Exists: 1
+  Exists: 0
 --- !u!114 &114166676601508640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,14 +167,14 @@ MonoBehaviour:
   Path: event:/Forest Ambience
   guid: dbe0e9f465196948b316cfbf7f7963be
   Banks:
-  - {fileID: 114105101196123690}
+  - {fileID: 114681205560186358}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 32500
+  Length: 24496
 --- !u!114 &114625583559233942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,8 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: Assets/FMOD/GGJ19/Build/Desktop/Master Bank.strings.bank
-  lastModified: 636841040540000000
+  Path: Assets\FMOD\GGJ19\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636841026904465975
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -213,6 +213,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 824
   Exists: 1
+--- !u!114 &114681205560186358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity\Hansel und Gretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636841066817480293
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 509504
+  Exists: 1
 --- !u!114 &114790460202962356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,14 +248,14 @@ MonoBehaviour:
   Path: event:/Footsteps
   guid: e85d542feab3a54bbe728c2e794659ef
   Banks:
-  - {fileID: 114105101196123690}
+  - {fileID: 114681205560186358}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 687
+  Length: 500
 --- !u!114 &114819919292974826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +271,7 @@ MonoBehaviour:
   Path: event:/Music
   guid: b8cf78417d9890429756935e239d3a0d
   Banks:
-  - {fileID: 114105101196123690}
+  - {fileID: 114681205560186358}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
