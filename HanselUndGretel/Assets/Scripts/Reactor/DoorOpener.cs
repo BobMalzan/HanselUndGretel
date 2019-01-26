@@ -8,7 +8,7 @@ public class DoorOpener : AReactor
     public AnimationClip m_GateClose;
     private Animation m_animator;
 
-    public void Awake()
+    public override void Awake()
     {
         base.Awake();
         m_animator = GetComponent<Animation>();
