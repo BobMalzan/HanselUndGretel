@@ -1754,14 +1754,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400106}
-  - component: {fileID: 11100000}
+  - component: {fileID: 495970874336936719}
+  - component: {fileID: 4718657029810031532}
   m_Layer: 0
-  m_Name: Male_3
+  m_Name: Male_3_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &400106
 Transform:
   m_ObjectHideFlags: 0
@@ -1778,18 +1779,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &11100000
-Animation:
+--- !u!95 &495970874336936719
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100106}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 1
+  m_Avatar: {fileID: 9000000, guid: 4899c4abe88f72e4aaf6bb613e818459, type: 3}
+  m_Controller: {fileID: 9100000, guid: f297797635a2b7445ad2ea55cec7353b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4718657029810031532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05225f44a0d3cc94cb04fef19a6aa7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundWalk: event:/Footsteps
+  soundRun: event:/Footsteps
