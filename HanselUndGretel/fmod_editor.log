@@ -17,38 +17,6 @@
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] SoundI::release                          : GGJ19_forest_01 (0000000010D7FFB8)
-[LOG] SoundI::release                          :     GGJ19_forest_01 (000000008D42FB38)
-[LOG] SoundI::release                          :     GGJ19_forest_01 (0000000010D80828)
-[LOG] SoundI::release                          :  (0000000083D81B88)
-[LOG] SoundI::release                          :     GGJ19_footstep-01 (000000008D42BD78)
-[LOG] SoundI::release                          :  (0000000083D815C8)
-[LOG] SoundI::release                          :     GGJ19_footstep-02 (000000008DD794D8)
-[LOG] SoundI::release                          :  (0000000083D83118)
-[LOG] SoundI::release                          :     GGJ19_footstep-03 (000000008D42BF18)
-[LOG] SoundI::release                          :  (0000000083D84988)
-[LOG] SoundI::release                          :     GGJ19_footstep-04 (000000008DD7A6B8)
-[LOG] SoundI::release                          :  (0000000083D84C68)
-[LOG] SoundI::release                          :     GGJ19_footstep-05 (000000008DD7C258)
-[LOG] SoundI::release                          :  (0000000083D81738)
-[LOG] SoundI::release                          :     GGJ19_footstep-06 (000000008DD799B8)
-[LOG] SoundI::release                          :  (0000000083D843C8)
-[LOG] SoundI::release                          :     GGJ19_footstep-07 (000000008DD7C0B8)
-[LOG] SoundI::release                          :  (0000000083D84DD8)
-[LOG] SoundI::release                          :     GGJ19_footstep-08 (000000008DD7B218)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
