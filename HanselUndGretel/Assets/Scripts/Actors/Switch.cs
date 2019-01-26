@@ -6,6 +6,13 @@ public class Switch : AActor
 {
     public bool m_SingleUse;
     private bool isUsed;
+    private Animation m_animator;
+
+    public new void Awake()
+    {
+        base.Awake();
+        m_animator = GetComponent<Animation>();
+    }
 
     public override string HintText()
     {
@@ -25,6 +32,10 @@ public class Switch : AActor
             isUsed = true;
         }
 
+        if (IsAktive) { m_animator[m_animator.clip.name].speed = -1; }
+        else { m_animator[m_animator.clip.name].speed = 1; }
+
+        m_animator.Play();
         IsAktive = !IsAktive;
         return true;
     }

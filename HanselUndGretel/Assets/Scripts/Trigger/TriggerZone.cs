@@ -32,13 +32,28 @@ public class TriggerZone : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Press E");
-                if (linkedActor.Interact())
+
+                if (Playercontroller.Instance.CurrentItem == null)
                 {
-                    DebugCanvas.Instance.ShowHint(linkedActor.SucessText());
+                    if (linkedActor.Interact())
+                    {
+                        DebugCanvas.Instance.ShowHint(linkedActor.SucessText());
+                    }
+                    else
+                    {
+                        DebugCanvas.Instance.ShowHint(linkedActor.HintText());
+                    }
                 }
                 else
                 {
-                    DebugCanvas.Instance.ShowHint(linkedActor.HintText());
+                    if (linkedActor.InteractWith(Playercontroller.Instance.CurrentItem))
+                    {
+                        DebugCanvas.Instance.ShowHint(linkedActor.SucessText());
+                    }
+                    else
+                    {
+                        DebugCanvas.Instance.ShowHint(linkedActor.HintText());
+                    }
                 }
             }
             if (Input.GetKeyDown(KeyCode.R))
