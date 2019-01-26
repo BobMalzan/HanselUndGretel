@@ -1,0 +1,167 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CompanionAI : MonoBehaviour
+{
+    [SerializeField]
+    float m_stressMax = 100.0f;
+    [SerializeField]
+    float m_followingDistance = 1.0f;
+    [SerializeField]
+    float m_StressLimit4Resist = 5.0f;
+    [SerializeField, Range(-5,0)]
+    float m_CalmDownOutsideStressZone = -2.0f;
+
+    Rigidbody m_rigid;
+
+    float m_currentStress;
+
+    ECompanionState m_currentState;
+    Playercontroller m_Player;
+
+    StressZone m_currentStressZone;
+
+    private void Awake()
+    {
+        m_Player = FindObjectOfType<Playercontroller>();
+        m_rigid = GetComponent<Rigidbody>();
+    }
+
+    public void SetStressZone(StressZone _zone)
+    {
+        if(m_currentStressZone != null)
+        {
+            Debug.LogWarning("Hey! There was overlaping stresszones!... Please srink one!");
+        }
+        m_currentStressZone = _zone;
+
+        Debug.Log("EnterStressZone!");
+    }
+
+    public void RemoveStressZone(StressZone _zone)
+    {
+        if(m_currentStressZone != _zone)
+        {
+            Debug.LogWarning("Hey! You exit a stresszone but you are still in a other!");
+        }
+        else
+        {
+            m_currentStressZone = null;
+        }
+
+        Debug.Log("ExitStressZone!");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        BehaviorUpdate();
+        UpdateStress();
+    }
+
+    private void BehaviorUpdate()
+    {
+        switch (m_currentState)
+        {
+            case ECompanionState.Waiting:
+                transform.LookAt(m_Player.transform.position);
+                break;
+            case ECompanionState.Follow:
+                transform.LookAt(m_Player.transform.position);
+                if (Vector3.Distance(m_Player.transform.position, transform.position) > m_followingDistance)
+                {
+                    Vector3 dir = (m_Player.transform.position - transform.position).normalized;
+                    m_rigid.MovePosition(transform.position + dir * (m_Player.m_WalkSpeed + 1.0f) * Time.deltaTime);
+                }
+                break;
+            case ECompanionState.Panic:
+                transform.Rotate(new Vector3(1,1) * Time.deltaTime * 200.0f); //hehehe
+                break;
+            case ECompanionState.Resist:
+                transform.Rotate(Vector3.up * Time.deltaTime * 100.0f); //hehehe
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void Call_FollowMe()
+    {
+        ChangeState(ECompanionState.Follow);
+    }
+
+    public void Call_WaitHere()
+    {
+        ChangeState(ECompanionState.Waiting);
+    }
+
+    private void UpdateStress()
+    {
+        float StressGain = 0;
+
+        if(m_currentStressZone == null)
+        {
+            StressGain += m_CalmDownOutsideStressZone;
+        }
+        else
+        {
+            StressGain += m_currentStressZone.CalcStressInZone(m_currentState == ECompanionState.Follow || m_currentState == ECompanionState.Resist ? m_Player.transform.position : transform.position);
+        }
+
+        if(m_currentState == ECompanionState.Follow)
+        {
+            StressGain += m_Player.ReduceStress;
+        }
+        
+        if(m_currentState == ECompanionState.Follow && StressGain >= m_StressLimit4Resist)
+        {
+            ChangeState(ECompanionState.Resist);
+        }
+        else if(m_currentState == ECompanionState.Resist && StressGain<= m_StressLimit4Resist)
+        {
+            ChangeState(ECompanionState.Follow);
+        }
+
+        DebugCanvas.Instance.ShowStressPegel(StressGain);
+        DebugCanvas.Instance.ShowStress(m_currentStress);
+
+        m_currentStress += StressGain * Time.deltaTime;
+        if(m_currentStress < 0.0f) { m_currentStress = 0.0f; }
+
+        if (m_currentStress >= m_stressMax)
+        {
+            ChangeState(ECompanionState.Panic);
+        }
+    }
+
+    void ChangeState(ECompanionState _state)
+    {
+        switch (_state)
+        {
+            case ECompanionState.Waiting:
+                break;
+            case ECompanionState.Follow:
+                break;
+            case ECompanionState.Panic:
+                Debug.Log("COMPANION: Panic!");
+                //GameOver OR Flee
+                break;
+            case ECompanionState.Resist:
+                Debug.Log("COMPANION: Resist!");
+                break;
+            default:
+                break;
+        }
+
+        m_currentState = _state;
+    }
+
+    enum ECompanionState
+    {
+        Waiting,
+        Follow,
+        Panic,
+        Resist,
+    }
+}
