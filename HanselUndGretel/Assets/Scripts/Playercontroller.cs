@@ -93,7 +93,11 @@ public class Playercontroller : MonoBehaviour
 
     bool IsGrounded()
     {
-        return true; // Physics.Raycast(transform.position, Vector3.down, 1f); //7
+        Ray ray = new Ray(transform.position, Vector3.down);
+
+        Debug.DrawLine(ray.origin, ray.origin + ray.direction * 1.1f);
+
+        return Physics.Raycast(ray, 1.1f); //7
     }
 
     public enum EPlayerState
