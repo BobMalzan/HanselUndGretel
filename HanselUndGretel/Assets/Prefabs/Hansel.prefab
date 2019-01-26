@@ -1073,6 +1073,7 @@ MonoBehaviour:
   m_RotationSpeed: 30
   m_DistanceDragBack: 2.5
   m_reduceStress: -2
+  m_HoldingBone: {fileID: 105288267}
 --- !u!1 &803530748
 GameObject:
   m_ObjectHideFlags: 0
