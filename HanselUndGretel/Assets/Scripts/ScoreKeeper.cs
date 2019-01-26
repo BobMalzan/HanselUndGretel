@@ -18,6 +18,8 @@ public class ScoreKeeper : MonoBehaviour
 
         DontDestroyOnLoad(this);
         Get = this;
+
+
     }
 
     public void SelectCharacter(bool _playerIsHans)
