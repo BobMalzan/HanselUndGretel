@@ -23,11 +23,13 @@ public class WalkSounds : MonoBehaviour
 
     public void Step()
     {
+        Debug.Log("Step");
         m_WalkEventInstance.start();
     }
 
     public void RunStep()
     {
+        Debug.Log("Run");
         m_RunEventInstance.start();
     }
 }

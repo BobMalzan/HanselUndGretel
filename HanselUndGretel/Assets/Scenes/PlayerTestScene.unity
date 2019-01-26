@@ -483,7 +483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 792791657, guid: 03fc4a05e820dd344ae0d024c6936e9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.845
+      value: 0.032
       objectReference: {fileID: 0}
     - target: {fileID: 792791657, guid: 03fc4a05e820dd344ae0d024c6936e9d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -521,7 +521,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1288437265, guid: 03fc4a05e820dd344ae0d024c6936e9d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 03fc4a05e820dd344ae0d024c6936e9d, type: 3}
 --- !u!114 &693854821 stripped
 MonoBehaviour:
@@ -683,6 +684,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0487094303a0f564a9196c0753a1325c, type: 3}
+--- !u!1 &1270503636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 352352604, guid: d5f42b359da1e874786f3bed9b8c94a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1666256549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1270503637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270503636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05225f44a0d3cc94cb04fef19a6aa7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundWalk: event:/Footsteps
+  soundRun: event:/Footsteps
+--- !u!1 &1363114183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 792791655, guid: 03fc4a05e820dd344ae0d024c6936e9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 516878650}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1363114184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363114183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05225f44a0d3cc94cb04fef19a6aa7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundWalk: event:/Footsteps
+  soundRun: event:/Footsteps
 --- !u!1 &1413319537
 GameObject:
   m_ObjectHideFlags: 0
