@@ -20,7 +20,6 @@ public class SpeechBubble : MonoBehaviour
 
         m_EventInstance = FMODUnity.RuntimeManager.CreateInstance(soundToPlay);
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(m_EventInstance, transform, GetComponent<Rigidbody>());
-        // m_EventInstance.start();
     }
 
     public void Update()
@@ -48,6 +47,7 @@ public class SpeechBubble : MonoBehaviour
         m_TextObject.enabled = true;
         m_ImageObject.enabled = true;
         m_Timer = 3.0f;
+        m_EventInstance.start();
     }
 
     private void UpdateBubble()
