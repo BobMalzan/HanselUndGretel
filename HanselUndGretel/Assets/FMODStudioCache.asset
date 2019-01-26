@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114625583559233942}
-  - {fileID: 114810257742788058}
+  - {fileID: 114142516458215716}
   EditorEvents:
   - {fileID: 114819919292974826}
   - {fileID: 114480670138666964}
   - {fileID: 114790460202962356}
-  MasterBankRef: {fileID: 114810257742788058}
+  MasterBankRef: {fileID: 114142516458215716}
   StringsBankRef: {fileID: 114625583559233942}
-  stringsBankWriteTime: 636841006133906045
+  stringsBankWriteTime: 636841026904465975
   cacheVersion: 2
 --- !u!114 &114104195073175002
 MonoBehaviour:
@@ -65,6 +65,26 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 634080
+  Exists: 1
+--- !u!114 &114142516458215716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity\Hansel und Gretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636841103708652829
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 635200
   Exists: 1
 --- !u!114 &114166676601508640
 MonoBehaviour:
@@ -167,7 +187,7 @@ MonoBehaviour:
   Path: event:/Forest Ambience
   guid: dbe0e9f465196948b316cfbf7f7963be
   Banks:
-  - {fileID: 114810257742788058}
+  - {fileID: 114142516458215716}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -188,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\GGJ19\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636841006133906045
+  lastModified: 636841026904465975
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -228,7 +248,7 @@ MonoBehaviour:
   Path: event:/Footsteps
   guid: e85d542feab3a54bbe728c2e794659ef
   Banks:
-  - {fileID: 114810257742788058}
+  - {fileID: 114142516458215716}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -271,14 +291,14 @@ MonoBehaviour:
   Path: event:/Music
   guid: b8cf78417d9890429756935e239d3a0d
   Banks:
-  - {fileID: 114810257742788058}
-  IsStream: 0
+  - {fileID: 114142516458215716}
+  IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 8500
+  Length: 23989
 --- !u!114 &114946895056846334
 MonoBehaviour:
   m_ObjectHideFlags: 0
