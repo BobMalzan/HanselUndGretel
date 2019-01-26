@@ -9,7 +9,7 @@
 [LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000000045F65EF8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000000633F47E8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -25,47 +25,22 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSound                     : filename = C:\Projects\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 000000003F1CD838 : node = 000000003F3F6350
-[LOG] SystemI::createSound                     : add node to async list : head = 00000000463C99C8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003F1CD838
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Projects\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1869120
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29312
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003F3F6468
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_wolves_howling_01', format=2, channels=2, frequency=48000, lengthbytes=420832, lengthpcm=1920000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.539734.
-[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003F1CD838
-[LOG] SoundI::getSubSound                      : sound 000000003F1CD838.  Subsound index 0 / 1
-[LOG] SoundI::release                          : GGJ19_wolves_howling_01 (000000003F1CD838)
-[LOG] SoundI::release                          :     GGJ19_wolves_howling_01 (00000000463C8EB8)
-[LOG] SoundI::release                          :     GGJ19_wolves_howling_01 (000000003F1CD9E8)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSound                     : filename = C:\Projects\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003F1CD838 : node = 000000003F3F6350
-[LOG] SystemI::createSound                     : add node to async list : head = 00000000463C99C8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003F1CD838
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Projects\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1869120
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29312
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003F3F6468
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_scary_ambience_01', format=2, channels=2, frequency=48000, lengthbytes=402816, lengthpcm=1799016, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.608917.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003F1CD838
-[LOG] SoundI::getSubSound                      : sound 000000003F1CD838.  Subsound index 0 / 1
-[LOG] SoundI::release                          : GGJ19_scary_ambience_01 (000000003F1CD838)
-[LOG] SoundI::release                          :     GGJ19_scary_ambience_01 (00000000463C8EB8)
-[LOG] SoundI::release                          :     GGJ19_scary_ambience_01 (000000003F1CD9E8)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1901856
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 30208
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006C71F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA39151220
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA391511F0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA391512F0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA391513B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000003F8E5BA8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_menu_01', format=2, channels=2, frequency=48000, lengthbytes=32640, lengthpcm=144000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.452484.
+[WRN] EventInstance::update                    : Event {81a54915-61fe-4aae-ac91-16420af285b4} waited 71 milliseconds for sample data to load.  Preload sample data to avoid this delay.
+[LOG] SoundI::release                          :  (0000000063ACAB68)
+[LOG] SoundI::release                          :     GGJ19_menu_01 (0000000063742678)
