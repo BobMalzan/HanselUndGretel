@@ -5,7 +5,7 @@
             <value>Torch</value>
         </property>
         <property name="outputFormat">
-            <value>1</value>
+            <value>2</value>
         </property>
         <relationship name="folder">
             <destination>{89ec4146-4aa1-4de5-853d-55b69b68bcde}</destination>
@@ -212,6 +212,7 @@
     <object class="MixerBusEffectChain" id="{6713ff35-2115-481c-8279-732f113e3a32}">
         <relationship name="effects">
             <destination>{dc271914-326f-4cb3-9a48-b319c147e10b}</destination>
+            <destination>{75a43d91-07b7-4d2e-8b37-f211682d3f5a}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{7b6b4129-08db-4be4-a9ee-92741bf33f5d}"/>
@@ -279,6 +280,14 @@
         </relationship>
     </object>
     <object class="MixerBusFader" id="{dc271914-326f-4cb3-9a48-b319c147e10b}"/>
+    <object class="SpatialiserEffect" id="{75a43d91-07b7-4d2e-8b37-f211682d3f5a}">
+        <property name="minimumDistance">
+            <value>0</value>
+        </property>
+        <property name="maximumDistance">
+            <value>800</value>
+        </property>
+    </object>
     <object class="AutomationPoint" id="{93de5c63-3b71-4fa5-a3b9-a23f08993f7b}">
         <property name="position">
             <value>1</value>
