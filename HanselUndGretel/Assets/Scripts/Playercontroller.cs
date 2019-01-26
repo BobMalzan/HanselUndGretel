@@ -22,10 +22,15 @@ public class Playercontroller : MonoBehaviour
     public EPlayerState CurrentState { get { return m_currentState; } }
 
     Rigidbody m_rigid;
+    public Transform m_HoldingBone;
+
+    public AItem CurrentItem { get { return m_currentItem; } }
+    private AItem m_currentItem;
 
     //Animation
     Animator m_Animator;
     int m_aniMovID;
+    int m_PickupID;
 
     private CompanionAI m_ai;
 
@@ -69,6 +74,56 @@ public class Playercontroller : MonoBehaviour
                 m_currentState = EPlayerState.Freehanded;
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            if(m_currentItem != null)//Drop
+            {
+                m_currentItem.Drop();
+                m_currentItem.transform.parent = transform.parent;
+                m_currentItem = null;
+                m_currentState = EPlayerState.Freehanded;
+            }
+            else if(CurrentState == EPlayerState.Freehanded)
+            {
+                m_currentItem = TryPickUp();
+                if(m_currentItem != null)
+                {
+                    m_currentState = EPlayerState.HoldingIten;
+                    m_currentItem.PickUp();
+
+                    m_currentItem.transform.parent = m_HoldingBone;
+                    m_currentItem.transform.localPosition = m_currentItem.m_holdingPosOffset();
+                    m_currentItem.transform.localRotation = Quaternion.Euler(m_currentItem.m_holdingRotOffset());
+                }
+            }
+        }
+    }
+
+    private AItem TryPickUp()
+    {
+        RaycastHit[] m_RaycastHit = Physics.SphereCastAll(transform.position, 2.0f, Vector3.down, 0.0f);
+
+        AItem nearestItem = null;
+
+        foreach(RaycastHit _hit in m_RaycastHit)
+        {
+            AItem tmp = _hit.transform.gameObject.GetComponent<AItem>();
+
+            if(tmp != null)
+            {
+                if(nearestItem == null) { nearestItem = tmp; }
+                else
+                {
+                    float distance1 = Vector3.Distance(transform.position, tmp.transform.position);
+                    float distance2 = Vector3.Distance(transform.position, nearestItem.transform.position);
+
+                    if(distance2 < distance1) { nearestItem = tmp; }
+                }
+            }
+        }
+
+        return nearestItem;
     }
 
     private void OnAnimatorIK(int layerIndex)
