@@ -22,8 +22,7 @@ namespace FMODUnity
         [SerializeField]
         FMODPlatform fmodPlatform;
 
-        [AOT.MonoPInvokeCallback(typeof(FMOD.DEBUG_CALLBACK))]
-        static FMOD.RESULT DEBUG_CALLBACK(FMOD.DEBUG_FLAGS flags, FMOD.StringWrapper file, int line, FMOD.StringWrapper func, FMOD.StringWrapper message)
+        FMOD.RESULT DEBUG_CALLBACK(FMOD.DEBUG_FLAGS flags, FMOD.StringWrapper file, int line, FMOD.StringWrapper func, FMOD.StringWrapper message)
         {
             if (flags == FMOD.DEBUG_FLAGS.ERROR)
             {
@@ -563,7 +562,7 @@ retry:
             {
                 // Strings bank is always loaded
                 if (loadedBanks.Count > 1)
-                    PauseAllEvents(!focus);
+                    PauseAllEvents(focus);
 
                 if (focus)
                 {
@@ -580,7 +579,9 @@ retry:
         {
             if (studioSystem.isValid())
             {
-                PauseAllEvents(pauseStatus);
+                // Strings bank is always loaded
+                if (loadedBanks.Count > 1)
+                    PauseAllEvents(pauseStatus);
 
                 if (pauseStatus)
                 {
@@ -742,18 +743,12 @@ retry:
                 // Always load strings bank
                 try
                 {
-                    foreach (string masterBankFileName in fmodSettings.MasterBanks)
-                    {
-                        LoadBank(masterBankFileName + ".strings", fmodSettings.AutomaticSampleLoading);
-
-                        if (fmodSettings.AutomaticEventLoading)
-                        {
-                            LoadBank(masterBankFileName, fmodSettings.AutomaticSampleLoading);
-                        }
-                    }
+                    LoadBank(fmodSettings.MasterBank + ".strings", fmodSettings.AutomaticSampleLoading);
 
                     if (fmodSettings.AutomaticEventLoading)
                     {
+                        LoadBank(fmodSettings.MasterBank, fmodSettings.AutomaticSampleLoading);
+
                         foreach (var bank in fmodSettings.Banks)
                         {
                             LoadBank(bank, fmodSettings.AutomaticSampleLoading);
@@ -983,26 +978,12 @@ retry:
 
         public static void PauseAllEvents(bool paused)
         {
-            if (HasBanksLoaded)
-            {
-                FMOD.Studio.Bus masterBus;
-                if (StudioSystem.getBus("bus:/", out masterBus) == FMOD.RESULT.OK)
-                {
-                    masterBus.setPaused(paused);
-                }
-            }
+            GetBus("bus:/").setPaused(paused);
         }
 
         public static void MuteAllEvents(bool muted)
         {
-            if (HasBanksLoaded)
-            {
-                FMOD.Studio.Bus masterBus;
-                if (StudioSystem.getBus("bus:/", out masterBus) == FMOD.RESULT.OK)
-                {
-                    masterBus.setMute(muted);
-                }
-            }
+            GetBus("bus:/").setMute(muted);
         }
 
         public static bool IsInitialized
