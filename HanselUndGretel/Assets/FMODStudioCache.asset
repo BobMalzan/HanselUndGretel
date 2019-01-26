@@ -22,9 +22,12 @@ MonoBehaviour:
   - {fileID: 114699825288146658}
   - {fileID: 114224834330936410}
   - {fileID: 114416065129781162}
+  - {fileID: 114765204154995384}
+  - {fileID: 114946680915862126}
+  - {fileID: 114969789764417276}
   MasterBankRef: {fileID: 114142516458215716}
   StringsBankRef: {fileID: 114625583559233942}
-  stringsBankWriteTime: 636841230538940639
+  stringsBankWriteTime: 636841272490982242
   cacheVersion: 2
 --- !u!114 &114104195073175002
 MonoBehaviour:
@@ -83,11 +86,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Unity\Hansel und Gretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master
     Bank.bank
-  lastModified: 636841230538930668
+  lastModified: 636841272490855165
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1070848
+    Value: 1932064
   Exists: 1
 --- !u!114 &114166676601508640
 MonoBehaviour:
@@ -257,11 +260,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\GGJ19\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636841230538940639
+  lastModified: 636841272490982242
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 938
+    Value: 1084
   Exists: 1
 --- !u!114 &114658097703343256
 MonoBehaviour:
@@ -305,6 +308,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6000
+--- !u!114 &114765204154995384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Menu Popup
+  guid: 1549a581fe61ae4aac9116420af285b4
+  Banks:
+  - {fileID: 114142516458215716}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3000
 --- !u!114 &114790460202962356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +397,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 23989
+--- !u!114 &114946680915862126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Wolves
+  guid: bbe760d3e589b1499c225930e715e049
+  Banks:
+  - {fileID: 114142516458215716}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 42000
 --- !u!114 &114946895056846334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,3 +440,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 634080
   Exists: 0
+--- !u!114 &114969789764417276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Scary Ambience
+  guid: c544713c14daaf429f22343f169ad25b
+  Banks:
+  - {fileID: 114142516458215716}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 37479
