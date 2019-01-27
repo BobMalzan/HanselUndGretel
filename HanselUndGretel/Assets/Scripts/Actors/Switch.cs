@@ -8,6 +8,9 @@ public class Switch : AActor
     private bool isUsed;
     private Animation m_animator;
 
+    public AnimationClip m_OnAnimation;
+    public AnimationClip m_OffAnimation;
+
     public new void Awake()
     {
         base.Awake();
@@ -32,10 +35,9 @@ public class Switch : AActor
             isUsed = true;
         }
 
-        if (IsAktive) { m_animator[m_animator.clip.name].speed = -1; }
-        else { m_animator[m_animator.clip.name].speed = 1; }
-
+        m_animator.clip = !IsAktive ? m_OnAnimation : m_OffAnimation;
         m_animator.Play();
+
         IsAktive = !IsAktive;
         return true;
     }

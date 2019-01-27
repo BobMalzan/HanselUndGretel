@@ -49,6 +49,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: cb9504dc5ebcf204e92f68ee22a55c54, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: cb9504dc5ebcf204e92f68ee22a55c54, type: 2}
+  - {fileID: 7400000, guid: c262d95be6cc8504e807bcae9e884320, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -67,6 +68,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LinkedActors: []
   m_SingleUse: 0
+  m_OnAnimation: {fileID: 7400000, guid: cb9504dc5ebcf204e92f68ee22a55c54, type: 2}
+  m_OffAnimation: {fileID: 7400000, guid: c262d95be6cc8504e807bcae9e884320, type: 2}
 --- !u!114 &207667098378907496
 MonoBehaviour:
   m_ObjectHideFlags: 0
