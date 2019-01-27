@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: Sebastians PP Theme
+  m_Name: Sebastians PP Theme Alone
   m_EditorClassIdentifier: 
   settings:
   - {fileID: 114273232392217020}
@@ -131,7 +131,7 @@ MonoBehaviour:
     value: 0
   colorFilter:
     overrideState: 0
-    value: {r: 3.732132, g: 3.732132, b: 3.732132, a: 1}
+    value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     overrideState: 0
     value: 0
@@ -143,10 +143,10 @@ MonoBehaviour:
     value: 0
   postExposure:
     overrideState: 0
-    value: 3.38
+    value: 0
   contrast:
     overrideState: 0
-    value: -21.2
+    value: 7.1
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -175,14 +175,14 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   lift:
-    overrideState: 0
-    value: {x: 1, y: 0.1394349, z: 0.09802872, w: 0}
+    overrideState: 1
+    value: {x: 1, y: 0, z: 0.066812515, w: 0}
   gamma:
     overrideState: 0
-    value: {x: 0.6927334, y: 1, z: 0.97928774, w: 0.46896553}
+    value: {x: 1, y: 1, z: 1, w: 0}
   gain:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 1}
+    value: {x: 1, y: 1, z: 1, w: 0}
   masterCurve:
     overrideState: 0
     value:
