@@ -50,7 +50,7 @@ public class StressZone : MonoBehaviour
 
         value = Mathf.Clamp01(value);
 
-        Debug.Log("Value:" + value);
+        //Debug.Log("Value:" + value);
 
         return StressIncrease.Evaluate(value) * StressLevel;
     }

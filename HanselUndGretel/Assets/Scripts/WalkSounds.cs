@@ -23,13 +23,13 @@ public class WalkSounds : MonoBehaviour
 
     public void Step()
     {
-        Debug.Log("Step");
+        m_WalkEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         m_WalkEventInstance.start();
     }
 
     public void RunStep()
     {
-        Debug.Log("Run");
+        m_RunEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         m_RunEventInstance.start();
     }
 }

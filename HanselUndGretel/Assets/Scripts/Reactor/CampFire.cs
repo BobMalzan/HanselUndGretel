@@ -7,6 +7,7 @@ public class CampFire : AActor
     public StressZone m_ManipulateStressZone;
     [Range(-5,5)]
     public float m_StressChange;
+    public Light m_light;
 
     public ParticleSystem[] m_Effects;
 
@@ -31,6 +32,7 @@ public class CampFire : AActor
                 eff.Play();
             }
 
+            m_light.enabled = true;
             return true;
         }
         return false;

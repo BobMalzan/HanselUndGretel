@@ -11,6 +11,8 @@ public class Playercontroller : MonoBehaviour
     public float m_WalkSpeed = 5.0f;
     public float m_RotationSpeed = 15.0f;
 
+    public Light m_FriendlySpotLight;
+
     [SerializeField]
     public float m_DistanceDragBack = 2.5f;
 
@@ -62,6 +64,7 @@ public class Playercontroller : MonoBehaviour
                 {
                     m_ai.Call_FollowMe();
                     m_currentState = EPlayerState.HoldingHand;
+                    m_FriendlySpotLight.enabled = true;
                 }
                 else
                 {
@@ -72,6 +75,7 @@ public class Playercontroller : MonoBehaviour
             {
                 m_ai.Call_WaitHere();
                 m_currentState = EPlayerState.Freehanded;
+                m_FriendlySpotLight.enabled = false;
             }
         }
 
@@ -183,9 +187,9 @@ public class Playercontroller : MonoBehaviour
     {
         Ray ray = new Ray(transform.position, Vector3.down);
 
-        Debug.DrawLine(ray.origin, ray.origin + ray.direction * .05f);
+        Debug.DrawLine(ray.origin, ray.origin + ray.direction * .08f);
 
-        return Physics.Raycast(ray, .05f); //7
+        return Physics.Raycast(ray, .08f); //7
     }
 
     public enum EPlayerState
