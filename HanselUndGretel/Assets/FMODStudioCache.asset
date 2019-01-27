@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114006728437501192}
-  - {fileID: 114862482230961806}
+  - {fileID: 114406759801384846}
   EditorEvents:
   - {fileID: 114828868165709246}
   - {fileID: 114212835256997262}
@@ -25,9 +25,9 @@ MonoBehaviour:
   - {fileID: 114156916791830936}
   - {fileID: 114583112146941150}
   - {fileID: 114357074471153364}
-  MasterBankRef: {fileID: 114862482230961806}
+  MasterBankRef: {fileID: 114406759801384846}
   StringsBankRef: {fileID: 114006728437501192}
-  stringsBankWriteTime: 636841268062473561
+  stringsBankWriteTime: 636841272490982242
   cacheVersion: 2
 --- !u!114 &114006728437501192
 MonoBehaviour:
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\GGJ19\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636841268062473561
+  lastModified: 636841272490982242
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -63,7 +63,7 @@ MonoBehaviour:
   Path: event:/Footsteps
   guid: e85d542feab3a54bbe728c2e794659ef
   Banks:
-  - {fileID: 114862482230961806}
+  - {fileID: 114406759801384846}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
   Path: event:/Stress
   guid: 956dabe967aa3b4aaf5604beda9ca8d7
   Banks:
-  - {fileID: 114862482230961806}
+  - {fileID: 114406759801384846}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   Path: event:/Torch
   guid: fb2d105a3547dd4bad826ab7af0ba886
   Banks:
-  - {fileID: 114862482230961806}
+  - {fileID: 114406759801384846}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -117,6 +117,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 18500
+--- !u!114 &114406759801384846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity\Hansel und Gretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636841272490855165
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1932064
+  Exists: 1
 --- !u!114 &114410114033316282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +152,7 @@ MonoBehaviour:
   Path: event:/Wolves
   guid: bbe760d3e589b1499c225930e715e049
   Banks:
-  - {fileID: 114862482230961806}
+  - {fileID: 114406759801384846}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -175,7 +195,7 @@ MonoBehaviour:
   Path: event:/Light Torch
   guid: f752e3dfc246db48886edc7dcbd5f81a
   Banks:
-  - {fileID: 114862482230961806}
+  - {fileID: 114406759801384846}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -198,7 +218,7 @@ MonoBehaviour:
   Path: event:/Scary Ambience
   guid: c544713c14daaf429f22343f169ad25b
   Banks:
-  - {fileID: 114862482230961806}
+  - {fileID: 114406759801384846}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -221,7 +241,7 @@ MonoBehaviour:
   Path: event:/Music
   guid: b8cf78417d9890429756935e239d3a0d
   Banks:
-  - {fileID: 114862482230961806}
+  - {fileID: 114406759801384846}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -244,7 +264,7 @@ MonoBehaviour:
   Path: event:/Menu Popup
   guid: 1549a581fe61ae4aac9116420af285b4
   Banks:
-  - {fileID: 114862482230961806}
+  - {fileID: 114406759801384846}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -271,7 +291,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1932064
-  Exists: 1
+  Exists: 0
 --- !u!114 &114938609631142720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +307,7 @@ MonoBehaviour:
   Path: event:/Forest Ambience
   guid: dbe0e9f465196948b316cfbf7f7963be
   Banks:
-  - {fileID: 114862482230961806}
+  - {fileID: 114406759801384846}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
