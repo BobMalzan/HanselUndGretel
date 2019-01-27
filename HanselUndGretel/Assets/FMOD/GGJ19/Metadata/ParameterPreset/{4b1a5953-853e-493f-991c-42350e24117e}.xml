@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="ParameterPreset" id="{4b1a5953-853e-493f-991c-42350e24117e}">
         <property name="name">
-            <value>Distance</value>
+            <value>Listen</value>
         </property>
         <relationship name="folder">
             <destination>{e36b61b0-190c-4874-9516-ed5459214ac2}</destination>
@@ -14,6 +14,9 @@
     <object class="GameParameter" id="{1295b2ab-5e66-4ff4-b4d0-7faf2e55acfb}">
         <property name="initialValue">
             <value>0</value>
+        </property>
+        <property name="seekSpeed">
+            <value>3.2000000476837158</value>
         </property>
     </object>
 </objects>
