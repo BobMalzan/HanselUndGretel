@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{d48c8ddb-9031-4c4f-bd66-022ff88b98a5}">
+        <property name="assetPath">
+            <value>GGJ19_home-music_01-001.ogg</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>21.600000000000001</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{4d186366-40ea-4fd9-94f9-bdacaaeea5ba}</destination>
+        </relationship>
+    </object>
+</objects>
