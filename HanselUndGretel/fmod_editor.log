@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000004503CED8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000000042D55ED8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -23,338 +23,149 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32864
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006F00F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8107F1220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8107F11F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8107F12F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8107F13B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000006DE4B018
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_stress_01', format=2, channels=2, frequency=48000, lengthbytes=48512, lengthpcm=288000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562592.
-[LOG] SoundI::release                          :  (000000006DE74778)
-[LOG] SoundI::release                          :     GGJ19_stress_01 (0000000074608888)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] SystemI::createSound                     : filename = C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 00000000175822B8 : node = 0000000053FDC880
-[LOG] SystemI::createSound                     : add node to async list : head = 0000000074607658.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000175822B8
+[LOG] SystemI::createSound                     : setdata soundi = 0000000073FA5A28 : node = 0000000055188830
+[LOG] SystemI::createSound                     : add node to async list : head = 000000006C7DFF98.  list count = 0
+[LOG] SystemI::createSound                     : filename = C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073FA5A28
+[LOG] SystemI::createSound                     : setdata soundi = 0000000073FA4CA8 : node = 0000000055186DF0
 [LOG] SystemI::createSoundInternal             :     Create name='C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006C7DFF98.  list count = 0
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32864
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2974400
+[LOG] SystemI::createSound                     :     filename = C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32128
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000053FDC998
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000073FA65F8 : node = 00000000551879C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000055188948
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006C7DFF98.  list count = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     filename = C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 19200
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_title-music_01', format=2, channels=2, frequency=48000, lengthbytes=893984, lengthpcm=2746667, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.697449.
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000073FA5BD8 : node = 0000000055186CA0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006C7DFF98.  list count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_home-music_01-001', format=2, channels=2, frequency=48000, lengthbytes=198656, lengthpcm=1036800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.549683.
 [LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000175822B8
-[LOG] SoundI::getSubSound                      : sound 00000000175822B8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : GGJ19_title-music_01 (00000000175822B8)
-[LOG] SoundI::release                          :     GGJ19_title-music_01 (00000000746083A8)
-[LOG] SoundI::release                          :     GGJ19_title-music_01 (000000006E0C5E08)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSound                     : filename = C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000175822B8 : node = 0000000053FDB770
-[LOG] SystemI::createSound                     : add node to async list : head = 0000000074607658.  list count = 0
-[LOG] SystemI::createSound                     : filename = C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000744236A8 : node = 0000000053FDD450
-[LOG] SystemI::createSound                     : add node to async list : head = 0000000074607658.  list count = 1
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000175822B8
-[LOG] SystemI::createSound                     : filename = C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000074422E38 : node = 0000000053FDC730
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3232800
-[LOG] SystemI::createSound                     :     add node to async list : head = 0000000074607658.  list count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32864
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     :     filename = C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000053FDB888
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000074423D68 : node = 0000000053FDBE00
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     add node to async list : head = 0000000074607658.  list count = 2
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     filename = C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000744220B8 : node = 0000000053FDC490
-[LOG] SystemI::createSound                     :     add node to async list : head = 0000000074607658.  list count = 3
-[LOG] SystemI::createSound                     :     filename = C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000744225C8 : node = 0000000053FDC0A0
-[LOG] SystemI::createSound                     :     add node to async list : head = 0000000074607658.  list count = 4
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_home-music_01-003', format=2, channels=2, frequency=48000, lengthbytes=258176, lengthpcm=1036800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118286.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000175822B8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000744236A8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073FA5A28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073FA4CA8
 [LOG] SystemI::createSoundInternal             :     Create name='C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32864
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2974400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000053FDD568
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 19200
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_home-music_01-001', format=2, channels=2, frequency=48000, lengthbytes=198656, lengthpcm=1036800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.549683.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000744236A8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000074422E38
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32864
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000053FDC848
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000055186F08
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 19200
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_home-music_01-002', format=2, channels=2, frequency=48000, lengthbytes=245184, lengthpcm=1036800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.091431.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000074422E38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000074423D68
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073FA4CA8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073FA65F8
 [LOG] SystemI::createSoundInternal             :     Create name='C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32864
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2974400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000053FDBF18
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 19200
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_home-music_01-003', format=2, channels=2, frequency=48000, lengthbytes=258176, lengthpcm=1036800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118286.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000074423D68
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000744220B8
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32864
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000053FDC5A8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000055187AD8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_home-music_01-002', format=2, channels=2, frequency=48000, lengthbytes=245184, lengthpcm=1036800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.091431.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000744220B8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000744225C8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073FA65F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073FA5BD8
 [LOG] SystemI::createSoundInternal             :     Create name='C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32864
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2974400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000053FDC1B8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000055186DB8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_home-music_01-001', format=2, channels=2, frequency=48000, lengthbytes=198656, lengthpcm=1036800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.549683.
-[LOG] SoundI::getSubSound                      :     sound 00000000175822B8.  Subsound index 0 / 1
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000744225C8
-[LOG] SoundI::getSubSound                      : sound 00000000744236A8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000000074422E38.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000000074423D68.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000000744220B8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000000744225C8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : GGJ19_home-music_01-003 (0000000074423D68)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-003 (00000000746090A8)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-003 (0000000074422778)
-[LOG] SoundI::release                          : GGJ19_home-music_01-002 (0000000074422E38)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-002 (0000000074609588)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-002 (0000000074422AD8)
-[LOG] SoundI::release                          : GGJ19_home-music_01-001 (00000000744236A8)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-001 (0000000074608D68)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-001 (0000000074422268)
-[LOG] SoundI::release                          : GGJ19_home-music_01-001 (00000000744225C8)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-001 (00000000746098C8)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-001 (0000000074422928)
-[LOG] SoundI::release                          : GGJ19_home-music_01-002 (00000000744220B8)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-002 (0000000074609728)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-002 (0000000074422C88)
-[LOG] SoundI::release                          : GGJ19_home-music_01-003 (00000000175822B8)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-003 (0000000074607B88)
-[LOG] SoundI::release                          :     GGJ19_home-music_01-003 (00000000744234F8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073FA5BD8
+[LOG] SoundI::getSubSound                      : sound 0000000073FA5A28.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000073FA4CA8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000073FA65F8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000073FA5BD8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : GGJ19_home-music_01-002 (0000000073FA4CA8)
+[LOG] SoundI::release                          :     GGJ19_home-music_01-002 (0000000074660668)
+[LOG] SoundI::release                          :     GGJ19_home-music_01-002 (0000000073FA4E58)
+[LOG] SoundI::release                          : GGJ19_home-music_01-001 (0000000073FA5A28)
+[LOG] SoundI::release                          :     GGJ19_home-music_01-001 (00000000746604C8)
+[LOG] SoundI::release                          :     GGJ19_home-music_01-001 (0000000073FA67A8)
+[LOG] SoundI::release                          : GGJ19_home-music_01-001 (0000000073FA5BD8)
+[LOG] SoundI::release                          :     GGJ19_home-music_01-001 (0000000074623F18)
+[LOG] SoundI::release                          :     GGJ19_home-music_01-001 (0000000073FA5D88)
+[LOG] SoundI::release                          : GGJ19_home-music_01-002 (0000000073FA65F8)
+[LOG] SoundI::release                          :     GGJ19_home-music_01-002 (0000000074660328)
+[LOG] SoundI::release                          :     GGJ19_home-music_01-002 (0000000073FA5518)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32864
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2974400
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006F00F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006DEEF5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8107F1220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8107F11F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8107F12F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8107F13B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000006E1FF4B8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF810AA1220
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF810AA11F0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF810AA12F0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF810AA13B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000074664C28
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_footstep-01', format=2, channels=2, frequency=48000, lengthbytes=5760, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.812439.
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_menu_01', format=2, channels=2, frequency=48000, lengthbytes=32640, lengthpcm=144000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.452484.
+[LOG] SoundI::release                          :  (000000006C935788)
+[LOG] SoundI::release                          :     GGJ19_menu_01 (0000000074665F78)
+[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32864
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2974400
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006F00F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006DEEF5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8107F1220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8107F11F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8107F12F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8107F13B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000006E1FF4B8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF810AA1220
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF810AA11F0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF810AA12F0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF810AA13B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000006CA14228
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_footstep-03', format=2, channels=2, frequency=48000, lengthbytes=3968, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.810059.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32864
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006F00F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8107F1220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8107F11F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8107F12F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8107F13B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000006E1FF4B8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_footstep-02', format=2, channels=2, frequency=48000, lengthbytes=5472, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.722290.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32864
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006F00F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8107F1220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8107F11F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8107F12F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8107F13B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000006E1FF4B8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_footstep-07', format=2, channels=2, frequency=48000, lengthbytes=5664, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.810547.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32864
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006F00F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8107F1220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8107F11F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8107F12F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8107F13B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000006E1FF4B8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_footstep-04', format=2, channels=2, frequency=48000, lengthbytes=5088, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.772766.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32864
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006F00F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8107F1220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8107F11F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8107F12F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8107F13B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000006E1FF4B8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_footstep-05', format=2, channels=2, frequency=48000, lengthbytes=5728, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.684967.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32864
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006F00F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8107F1220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8107F11F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8107F12F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8107F13B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000006E1FF4B8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_footstep-06', format=2, channels=2, frequency=48000, lengthbytes=5920, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.775909.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32864
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006F00F5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8107F1220
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8107F11F0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8107F12F0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8107F13B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000006E1FF4B8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_footstep-08', format=2, channels=2, frequency=48000, lengthbytes=5408, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.813141.
-[LOG] SoundI::release                          :  (000000006DE74778)
-[LOG] SoundI::release                          :     GGJ19_footstep-01 (0000000074608BC8)
-[LOG] SoundI::release                          :  (000000006DE713B8)
-[LOG] SoundI::release                          :     GGJ19_footstep-02 (00000000746064C8)
-[LOG] SoundI::release                          :  (000000006DE72948)
-[LOG] SoundI::release                          :     GGJ19_footstep-03 (0000000074609248)
-[LOG] SoundI::release                          :  (000000006DE73078)
-[LOG] SoundI::release                          :     GGJ19_footstep-04 (0000000074608548)
-[LOG] SoundI::release                          :  (000000006DE72C28)
-[LOG] SoundI::release                          :     GGJ19_footstep-05 (000000007460A0E8)
-[LOG] SoundI::release                          :  (000000006DE72D98)
-[LOG] SoundI::release                          :     GGJ19_footstep-06 (00000000746079E8)
-[LOG] SoundI::release                          :  (000000006DE72AB8)
-[LOG] SoundI::release                          :     GGJ19_footstep-07 (0000000074609588)
-[LOG] SoundI::release                          :  (000000006DE741B8)
-[LOG] SoundI::release                          :     GGJ19_footstep-08 (00000000746069A8)
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GGJ19_light-torch_01', format=2, channels=2, frequency=48000, lengthbytes=17184, lengthpcm=72000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.591888.
+[LOG] SoundI::release                          :  (000000006C935788)
+[LOG] SoundI::release                          :     GGJ19_light-torch_01 (000000006C730618)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] SystemI::createSound                     : filename = C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000175822B8 : node = 0000000053FDB8C0
-[LOG] SystemI::createSound                     : add node to async list : head = 0000000074607658.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000175822B8
+[LOG] SystemI::createSound                     : setdata soundi = 0000000073FA5368 : node = 0000000055188830
+[LOG] SystemI::createSound                     : add node to async list : head = 000000006C7DFF98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073FA5368
 [LOG] SystemI::createSoundInternal             :     Create name='C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3232800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32864
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2974400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000053FDB9D8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000055188948
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_forest_01', format=2, channels=2, frequency=48000, lengthbytes=304512, lengthpcm=1175820, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.747528.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000175822B8
-[LOG] SoundI::getSubSound                      : sound 00000000175822B8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : GGJ19_forest_01 (00000000175822B8)
-[LOG] SoundI::release                          :     GGJ19_forest_01 (0000000074608548)
-[LOG] SoundI::release                          :     GGJ19_forest_01 (00000000744220B8)
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='GGJ19_wolves_howling_01', format=2, channels=2, frequency=48000, lengthbytes=420832, lengthpcm=1920000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.539734.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073FA5368
+[LOG] SoundI::getSubSound                      : sound 0000000073FA5368.  Subsound index 0 / 1
+[LOG] SoundI::release                          : GGJ19_wolves_howling_01 (0000000073FA5368)
+[LOG] SoundI::release                          :     GGJ19_wolves_howling_01 (0000000074660668)
+[LOG] SoundI::release                          :     GGJ19_wolves_howling_01 (0000000073FA5518)
