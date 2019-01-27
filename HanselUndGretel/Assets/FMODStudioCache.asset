@@ -25,9 +25,10 @@ MonoBehaviour:
   - {fileID: 114652411532980458}
   - {fileID: 114617893120439686}
   - {fileID: 114078042036564776}
+  - {fileID: 114972400659961788}
   MasterBankRef: {fileID: 114841491861140766}
   StringsBankRef: {fileID: 114625583559233942}
-  stringsBankWriteTime: 636841363796813548
+  stringsBankWriteTime: 636841864307086174
   cacheVersion: 2
 --- !u!114 &114078042036564776
 MonoBehaviour:
@@ -46,11 +47,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 114841491861140766}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
-  MaxDistance: 0
+  MaxDistance: 800
   Length: 18500
 --- !u!114 &114104195073175002
 MonoBehaviour:
@@ -283,11 +284,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\GGJ19\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636841363796813548
+  lastModified: 636841864307086174
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1084
+    Value: 1132
   Exists: 1
 --- !u!114 &114652411532980458
 MonoBehaviour:
@@ -305,7 +306,7 @@ MonoBehaviour:
   guid: c544713c14daaf429f22343f169ad25b
   Banks:
   - {fileID: 114841491861140766}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
@@ -418,7 +419,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 800
   Length: 23989
 --- !u!114 &114841491861140766
 MonoBehaviour:
@@ -434,11 +435,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\olivi\OneDrive\Dokumente\__Unity Projekte\HanselUndGretel\HanselUndGretel\Assets\FMOD\GGJ19\Build\Desktop\Master
     Bank.bank
-  lastModified: 636841363796683887
+  lastModified: 636841864307046285
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1528832
+    Value: 2827808
   Exists: 1
 --- !u!114 &114888195451107406
 MonoBehaviour:
@@ -483,3 +484,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 634080
   Exists: 0
+--- !u!114 &114972400659961788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Menu Music
+  guid: 7421e84f0ccd70418f5ecb72046716a0
+  Banks:
+  - {fileID: 114841491861140766}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 59079

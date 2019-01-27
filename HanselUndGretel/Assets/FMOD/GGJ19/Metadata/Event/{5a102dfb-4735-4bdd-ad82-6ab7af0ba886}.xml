@@ -285,7 +285,7 @@
             <value>0</value>
         </property>
         <property name="maximumDistance">
-            <value>800</value>
+            <value>200</value>
         </property>
     </object>
     <object class="AutomationPoint" id="{93de5c63-3b71-4fa5-a3b9-a23f08993f7b}">
