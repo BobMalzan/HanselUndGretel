@@ -24,9 +24,9 @@ public class Switch : AActor
 
     public override bool Interact()
     {
-        if(Playercontroller.Instance.CurrentState != Playercontroller.EPlayerState.Freehanded) { return false; }
+        if (ScoreKeeper.Get.Player.CurrentState != Playercontroller.EPlayerState.Freehanded) { return false; }
 
-        if(m_SingleUse)
+        if (m_SingleUse)
         {
             if(isUsed)
             {
