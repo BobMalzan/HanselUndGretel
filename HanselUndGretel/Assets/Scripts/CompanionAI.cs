@@ -24,13 +24,12 @@ public class CompanionAI : MonoBehaviour
     float m_currentStress;
 
     ECompanionState m_currentState;
-    Playercontroller m_Player;
-
-    StressZone m_currentStressZone;
+    public ECompanionState State { get { return m_currentState; } }
+StressZone m_currentStressZone;
 
     private void Awake()
     {
-        m_Player = FindObjectOfType<Playercontroller>();
+        Playercontroller[] ctrs = FindObjectsOfType<Playercontroller>();
         m_rigid = GetComponent<Rigidbody>();
         m_Animator = GetComponent<Animator>();
 
@@ -77,7 +76,7 @@ public class CompanionAI : MonoBehaviour
         if(m_currentState == ECompanionState.Follow)
         {
             m_Animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
-            m_Animator.SetIKPosition(AvatarIKGoal.LeftHand, Vector3.Lerp(transform.position, m_Player.transform.position, 0.5f) + Vector3.up * 0.5f);
+            m_Animator.SetIKPosition(AvatarIKGoal.LeftHand, Vector3.Lerp(transform.position, ScoreKeeper.Get.Player.transform.position, 0.5f) + Vector3.up * 0.5f);
         }
     }
 
@@ -86,16 +85,16 @@ public class CompanionAI : MonoBehaviour
         switch (m_currentState)
         {
             case ECompanionState.Waiting:
-                Vector3 lookAtPos = m_Player.transform.position;
+                Vector3 lookAtPos = ScoreKeeper.Get.Player.transform.position;
                 lookAtPos.y = transform.position.y;
                 transform.LookAt(lookAtPos);
                 break;
             case ECompanionState.Follow:
-                Vector3 lookAtPos2 = m_Player.transform.position;
+                Vector3 lookAtPos2 = ScoreKeeper.Get.Player.transform.position;
                 lookAtPos2.y = transform.position.y;
                 transform.LookAt(lookAtPos2);
 
-                float distance = Vector3.Distance(m_Player.transform.position, transform.position);
+                float distance = Vector3.Distance(ScoreKeeper.Get.Player.transform.position, transform.position);
 
                 if (distance > m_followingDistance)
                 {
@@ -103,7 +102,7 @@ public class CompanionAI : MonoBehaviour
 
                     Vector3 dir = (lookAtPos2 - transform.position).normalized;
                     float slowDown = (distance - m_followingDistance) > 0.01f ? -0.5f : (distance - m_followingDistance);
-                    m_rigid.MovePosition(transform.position + dir * (m_Player.m_WalkSpeed - slowDown) * Time.deltaTime);
+                    m_rigid.MovePosition(transform.position + dir * (ScoreKeeper.Get.Player.m_WalkSpeed - slowDown) * Time.deltaTime);
                 }
                 else
                 {
@@ -141,12 +140,12 @@ public class CompanionAI : MonoBehaviour
         }
         else
         {
-            StressGain += m_currentStressZone.CalcStressInZone(m_currentState == ECompanionState.Follow || m_currentState == ECompanionState.Resist ? m_Player.transform.position : transform.position);
+            StressGain += m_currentStressZone.CalcStressInZone(m_currentState == ECompanionState.Follow || m_currentState == ECompanionState.Resist ? ScoreKeeper.Get.Player.transform.position : transform.position);
         }
 
         if(m_currentState == ECompanionState.Follow)
         {
-            StressGain += m_Player.ReduceStress;
+            StressGain += ScoreKeeper.Get.Player.ReduceStress;
         }
         
         if(m_currentState == ECompanionState.Follow && StressGain >= m_StressLimit4Resist)
@@ -158,8 +157,8 @@ public class CompanionAI : MonoBehaviour
             ChangeState(ECompanionState.Follow);
         }
 
-        DebugCanvas.Instance.ShowStressPegel(StressGain);
-        DebugCanvas.Instance.ShowStress(m_currentStress);
+//         DebugCanvas.Instance.ShowStressPegel(StressGain);
+//         DebugCanvas.Instance.ShowStress(m_currentStress);
 
         m_currentStress += StressGain * Time.deltaTime;
         if(m_currentStress < 0.0f) { m_currentStress = 0.0f; }
@@ -194,7 +193,7 @@ public class CompanionAI : MonoBehaviour
         m_currentState = _state;
     }
 
-    enum ECompanionState
+    public enum ECompanionState
     {
         Waiting,
         Follow,
